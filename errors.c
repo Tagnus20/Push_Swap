@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 13:34:14 by averdejo          #+#    #+#             */
-/*   Updated: 2023/09/29 14:06:04 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/10/01 00:48:45 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	check_digit(char **argv)
 			j++;
 		else
 			return (1);
-		while (argv[i][j])
+		while (argv[i][j] != '\0')
 		{
 			if (argv[i][j] >= '0' && argv[i][j] <= '9')
 				j++;

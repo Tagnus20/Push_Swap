@@ -1,6 +1,6 @@
 RM = rm -f
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g3 #-fsanitize=address
 SRC = push_swap.c \
 		pushes.c \
 		reverse_rotates.c \
@@ -25,7 +25,7 @@ $(PRINTF):
 	make -C $(DIR_PRINTF)
 
 $(NAME): $(OBJ) $(INCLUDE)
-	$(CC) $(CFLAGS) $(PRINTF) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) $(PRINTF) -o $(NAME)
 
 %.o: %.c $(PRINTF)
 	$(CC) $(CFLAGS) -c -o $@ $<
