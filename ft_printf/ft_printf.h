@@ -6,17 +6,16 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 13:00:57 by averdejo          #+#    #+#             */
-/*   Updated: 2023/06/16 13:38:55 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/06/19 14:35:24 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <limits.h>
 # include <stdarg.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 void	ft_putchar(char c, int *i);
 void	ft_putstr(char *s, int *i);

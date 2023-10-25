@@ -6,12 +6,11 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 14:18:25 by averdejo          #+#    #+#             */
-/*   Updated: 2023/06/16 17:36:51 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/09/27 17:04:27 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 void	ft_format(const char *parameters, va_list args, int *i)
 {
@@ -34,7 +33,6 @@ void	ft_format(const char *parameters, va_list args, int *i)
 	}
 	else
 	{
-		printf("entro aqui\n");
 		write(1, parameters, 1);
 	}
 }
@@ -63,18 +61,3 @@ int	ft_printf(const char *parameters, ...)
 	va_end(args);
 	return (i);
 }
-
-/* int	main(void)
-{
-	char	x;
-	char	*p;
-	int		prueba;
-	int		i;
-	x = 's';
-	p = &x;
-	prueba = printf("%s", NULL);
-	i = ft_printf("%s", NULL);
-	printf("resultado printf ----> %d", prueba);
-	printf("resultado ft_printf ---> %d\n", i);
-	return (0);
-} */

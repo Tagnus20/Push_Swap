@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:29:32 by averdejo          #+#    #+#             */
-/*   Updated: 2023/09/27 20:08:45 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/09/29 14:18:32 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,30 +42,6 @@ void	add_node_back(long num, t_test **head)
 		node_it->next = new_node;
 	}
 }
-
-/* void	print_stacks(t_test *stack_a, t_test *stack_b) //borrar
-{
-	t_test	*node_a;
-	t_test	*node_b;
-
-	node_a = stack_a;
-	node_b = stack_b;
-	ft_printf("\nSTACK A\n");
-	while (node_a != NULL)
-	{
-		printf("%ld\n", node_a->number);
-		node_a = node_a->next;
-	}
-	ft_printf("\nSTACK B\n");
-	if (node_b != NULL)
-	{
-		while (node_b != NULL)
-		{
-			printf("%ld\n", node_b->number);
-			node_b = node_b->next;
-		}
-	}
-} */
 
 void	radix(t_test **stack_a, t_test **stack_b)
 {
@@ -116,7 +92,7 @@ int	main(int argc, char *argv[])
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2)
-		return (write(2, "Error\n", 7), 0);
+		return (0);
 	i = 1;
 	if (check_digit(argv))
 		return (write(2, "Error\n", 7), 0);
